@@ -1,5 +1,5 @@
 An nnU-Net network (https://github.com/MIC-DKFZ/nnUNet) is most optimally trained without dropout. 
-However, for computing uncertainty with Monte-Carlo dropout (https://doi.org/10.48550/arXiv.1506.02142) it is necessary to perform dropout during inference. 
+However, for computing the uncertainty along with it's predictions with Monte-Carlo dropout (https://doi.org/10.48550/arXiv.1506.02142) it is necessary to perform dropout during inference. 
 
 To be able to perform MC-dropout on a train nnU-Net network, it is therefore necessary to insert dropout layers (i.e. dropout surgery). 
 When adapting two files (/nnunet/utilities/get_network_from_plans.py and /nnunet/inference/predict_from_raw_data.py) it becomes possible to perform dropout during inference. 
